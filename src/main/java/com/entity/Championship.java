@@ -30,7 +30,7 @@ public class Championship {
                     //recuperation de la methode de calcul de points (propre au sport pratique par l'equipe)
                     //calcul du nombre de points pour le match
                     //ajout du nombre de points gagnes du match au nombre de points gagnes par l'equipe
-                    nbPoints+=match.getTeam().getSport().calculateNbPoints(match);
+                    nbPoints+=match.getTeam().calculateNbPoints(match);
                 }
                 listOfResults.add("Equipe "+ team.getName()+" nbPoints="+nbPoints);
             }

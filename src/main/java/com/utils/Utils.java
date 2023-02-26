@@ -3,21 +3,13 @@ package com.utils;
 import com.entity.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Utils {
 
-    public static Team initFootballTeam(String name, Championship championship){
-        return new Team(name,new Football(),championship,new ArrayList<>());
-    }
-    public static Team initVolleyballTeam(String name, Championship championship){
-        return new Team(name,new Volleyball(),championship, new ArrayList<>());
-    }
-
     public static Championship initChampionship(){
         Championship championship=new Championship(new ArrayList<>());
-        Team fc=initFootballTeam("fcb", championship);
-        Team vc=initVolleyballTeam("vc", championship);
+        Team fc=new FootballTeam("fcb", championship,new ArrayList<>());
+        Team vc=new VolleyballTeam("vc", championship,new ArrayList<>());
         championship.getListOfTeams().add(fc);
         championship.getListOfTeams().add(vc);
 

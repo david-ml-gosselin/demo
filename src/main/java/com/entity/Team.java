@@ -2,15 +2,14 @@ package com.entity;
 
 import java.util.List;
 
-public class Team {
+public abstract class Team {
     private String name;
-    private Sport sport;
+
     private Championship championship;
     private List<Match> listOfMatches;
 
-    public Team(String name, Sport sport, Championship championship, List<Match> listOfMatches) {
+    public Team(String name, Championship championship, List<Match> listOfMatches) {
         this.name=name;
-        this.sport = sport;
         this.championship = championship;
         this.listOfMatches = listOfMatches;
     }
@@ -21,14 +20,6 @@ public class Team {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Sport getSport() {
-        return sport;
-    }
-
-    public void setSport(Sport sport) {
-        this.sport = sport;
     }
 
     public Championship getChampionship() {
@@ -46,4 +37,6 @@ public class Team {
     public void setListOfMatches(List<Match> listOfMatches) {
         this.listOfMatches = listOfMatches;
     }
+
+    public abstract int calculateNbPoints(Match match);
 }
