@@ -5,6 +5,7 @@ import java.util.List;
 public class FootballTeam extends Team {
     public FootballTeam(String name, Championship championship, List<Match> listOfMatches) {
         super(name, championship, listOfMatches);
+
     }
 
     @Override
